@@ -28,14 +28,14 @@ class ViewController: UIViewController {
     
     
     @objc func fillGrid() {
-        // Удаляем старые квадраты, если они есть
+        // Помог Chat
         for subview in view.subviews {
             if subview is UIView {
                 subview.removeFromSuperview()
             }
         }
         
-        // Генерируем квадраты
+        // Квадраты
         for row in 0..<gridSize{
             for column in 0..<gridSize {
                 let square = UIView(frame: CGRect(x: CGFloat(column) * squareSize, y: CGFloat(row) * squareSize, width: squareSize, height: squareSize))
@@ -47,9 +47,9 @@ class ViewController: UIViewController {
     
     // Функция для генерации случайного цвета
     func randomColor() -> UIColor {
-        let red = CGFloat(drand48()) // Случайное значение от 0 до 1 для красного
-        let green = CGFloat(drand48()) // Случайное значение от 0 до 1 для зелёного
-        let blue = CGFloat(drand48()) // Случайное значение от 0 до 1 для синего
+        let red = CGFloat(drand48()) 
+        let green = CGFloat(drand48())
+        let blue = CGFloat(drand48())
         return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
     }
 }
